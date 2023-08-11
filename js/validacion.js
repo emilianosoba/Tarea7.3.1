@@ -8,7 +8,7 @@ function showAlertError() {
 
 
 function validation() {
-    
+
     let name = document.getElementById('nombre').value;
     let sname = document.getElementById('apellido').value;
     let email = document.getElementById('email').value;
@@ -17,18 +17,24 @@ function validation() {
     let passValidation = pass1 === pass2;
 
     if ( name != '' && sname != '' && email != '' && email.includes('@') && passValidation) {
-        showAlertSuccess();
+        return true;
     } else {
-        showAlertError();
+        return false;
     }
 }
 
-const registrarme = document.getElementById("regBtn");
+document.addEventListener('DOMContentLoaded', function(){ 
 
-registrarme.addEventListener("click", function(){
+    const registrarme = document.getElementById("regBtn");
+
+    registrarme.addEventListener("click", function(){
     if (validation()){
         showAlertSuccess();
     } else {
         showAlertError();
     }
 });
+
+
+})
+
