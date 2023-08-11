@@ -20,3 +20,13 @@ function validation() {
         showAlertError();
     }
 }
+
+const registrarme = document.getElementById("regBtn");
+
+registrarme.addEventListener("click", function(){
+    if (validation()){
+        showAlertSuccess();
+    } else {
+        showAlertError();
+    }
+});
