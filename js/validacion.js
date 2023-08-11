@@ -9,14 +9,14 @@ function showAlertError() {
 let name = document.getElementById('nombre').value;
 let sname = document.getElementById('apellido').value;
 let email = document.getElementById('email').value;
-let passValidation;
+let pass1 = document.getElementById('password1').value;
+let pass2 = document.getElementById('password2').value;
+let passValidation = pass1 === pass2;
 
-if (getElementById('password1') == getElementById('password2')) {
-    passValidation = true;
-}
-
-if ( name != '' && sname != '' && email != '' && email.includes('@') && passValidation) {
-    showAlertSuccess();
-} else {
-    showAlertError();
+function validation() {
+    if ( name != '' && sname != '' && email != '' && email.includes('@') && passValidation) {
+        showAlertSuccess();
+    } else {
+        showAlertError();
+    }
 }
